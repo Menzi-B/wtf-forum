@@ -10,5 +10,8 @@
             "src": "/(.*)",
             "dest": "wtf_forum/wsgi.py"
         }
-    ]
+    ],
+      "engines": {
+    "node": "18.x"
+  }
 }
