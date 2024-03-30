@@ -1,9 +1,9 @@
 from django.urls import path
-from . import views
+from articles.views import views
 
 app_name = 'articles'
 
 urlpatterns = [
-    path('', views.article_list, name='list'),
+    path('', index),
     # so always ensure such a page(with slug) exists
 ]
