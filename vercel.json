@@ -1,12 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-        "src": "wtf_forum/wsgi.py","use": "@vercel/python","config": {"maxLambdaSize":"15mb", "runtime":"python3.9"}
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "wtf_forum/wsgi.py"
-        }
-    ]
+	"builds": [{
+		"src": "playground/wsgi.py",
+		"use": "@vercel/python",
+		"config": {"maxLambdaSize":"15mb","runtime":"python3.9"}
+	}],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "playground/wsgi.py"
+		}
+	]
 }
