@@ -11,7 +11,8 @@
             "dest": "wtf_forum/wsgi.py"
         }
     ],
-      "engines": {
+      "engines": [
+          {
     "node": "18.x"
-  }
+  }]
 }
