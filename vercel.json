@@ -1,13 +1,13 @@
 {
 	"builds": [{
-		"src": "/wtf_forum/wsgi.py",
+		"src": "wtf/wsgi.py",
 		"use": "@vercel/python",
 		"config": {"maxLambdaSize":"15mb","runtime":"python3.9"}
 	}],
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "/wtf_forum/wsgi.py"
+			"dest": "wtf/wsgi.py"
 		}
 	]
 }
