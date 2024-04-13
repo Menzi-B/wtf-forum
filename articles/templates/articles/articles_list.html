@@ -1,13 +1,18 @@
-{% load static %}
+{% extends 'base_layout.html'%}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Articles List</title>
-</head>
-<body>
-        <h1><img src="{% static 'wtf.jpg' %}"/></a></h1>
-        <h2>This contains a list of articles and much more</h2>
-</body>
-</html>
+{% block content %}
+    <h1>
+        -------------
+        |Enjoy:|
+        -------------
+    </h1>
+    <div class="articles">
+        {% for article in articles %}
+            <div class="article">
+                <h2><a href="{% url 'articles:detail' slug=article.slug%}"> {{ article.title }} </a></h2>
+                <p> {{ article.snippet }} </p>
+                <p> {{ article.date }} </p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
