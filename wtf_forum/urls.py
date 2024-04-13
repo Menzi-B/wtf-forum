@@ -9,3 +9,5 @@ urlpatterns = [
     path('articles/', include('articles.urls')),
     path('', article_views.article_list, name='home'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
