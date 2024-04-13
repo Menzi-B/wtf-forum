@@ -4,6 +4,8 @@ from . import views
 app_name = 'articles'
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.article_list, name='list'),
+    path('create/', views.article_create, name='create'),
+    path('<slug:slug>/', views.article_detail, name='detail'),  # django will look for page with corresponding slug,
     # so always ensure such a page(with slug) exists
 ]
